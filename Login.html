@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>NokiaDroid | Login</title>
+  <link rel = "icon" href = "./Images/Icons/mini_logo.ico" type = "image/x-icon">
+  <link type="text/css" rel="stylesheet" href="CSS/login.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+  <script language="Javascript">
+    function testarSeFoiEscrito(){
+      if(form.nome.value=="")
+        alert("Deve inserir um nome de usuário!!!");
+      if(form.senha.value=="")
+        alert("Deve inserir a sua senha!!!")
+      }
+    function mostrarSenha() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+        document.getElementById("olhao").src = "Images/Icons/Ocultar_Senha.png";
+      } else {
+        x.type = "password";
+        document.getElementById("olhao").src = "Images/Icons/Mostrar_Senha.png";
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <h2 class="selecionado"> ENTRAR </h2>
+          <a class="nao-selecionado underlineHover" href="Registro.html">REGISTRAR-SE</a>
+          <div class="fadeIn animacao-foto-perfil">
+            <script type="text/javascript"> function ImageArray (n) {this.length = n; for (var i =1; i <= n; i++) { this[i] = ' ';}}
+                imagem_perfil_aleatoria = new ImageArray(7)
+                imagem_perfil_aleatoria[0] = 'GatoEmo.png'; imagem_perfil_aleatoria[1] = 'GatoMcDonalds.png'; imagem_perfil_aleatoria[2] = 'GatoMontanha.png'; imagem_perfil_aleatoria[3] = 'GatoUwU.png'; imagem_perfil_aleatoria[4] = 'AMOGUS.png';imagem_perfil_aleatoria[5] = 'GatoSalada.png';imagem_perfil_aleatoria[6] = 'Gatoserio.png'
+                document.write('<img style="width:100;height:100;border-color: black;border-top: 10; border-style: solid;" class="w3-circle" id="icon" alt="Icone de usuario" title="Futuramente terá o nome do usuário" src="./Images/ProfilePhoto/' + imagem_perfil_aleatoria[Math.floor(Math.random() * imagem_perfil_aleatoria.length)] + '">');
+            </script>
+          </div>
+          <form name="form" action="Index.html">
+            <input type="text" id="login" class="fadeIn animacao-login-user" name="nome" placeholder="usuario/email">
+            <input type="password" id="password" class="fadeIn animacao-login-senha" name="senha" placeholder="senha">
+            <img src="Images/Icons/Mostrar_Senha.png" style="width: 30;position: absolute;margin-left:83%;margin-top:-50;display:block;cursor: pointer;" id="olhao" onclick="mostrarSenha()">
+            <input type="submit" class="fadeIn animacao-login" value="LOG IN" onclick="testarSeFoiEscrito()">
+          </form>
+          
+          <div id="formFooter">
+            <a class="underlineHover" href="https://www.tuasaude.com/tratamento-para-alzheimer/">Esqueceu a senha?</a>
+          </div>
+        </div>
+    </div>
+    <footer>
+        <p style="background-color: #C0C0C0; text-align: center;">Victor - All rights reserved<br>© Copyright 2021 - 2022</p>
+    </footer>
+</body>
+</html>

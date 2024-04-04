@@ -1,0 +1,103 @@
+<html>
+<head>
+  <title>NokiaDroid | Login</title>
+  <link rel = "icon" href = "./Images/Icons/mini_logo.ico" type = "image/x-icon">
+  <link type="text/css" rel="stylesheet" href="CSS/login.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+  <script language="Javascript">
+    function testarSeFoiEscrito(){
+      if(form.nome.value=="")
+        alert("Deve inserir um nome de usuário!!!");
+      if(form.senha.value=="")
+        alert("Deve inserir uma senha!!!");
+      if(form.email.value=="" )
+        alert("Deve inserir um email!!!")
+    }
+    function mostrarSenha() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+        document.getElementById("olhao").src = "Images/Icons/Ocultar_Senha.png";
+      } else {
+        x.type = "password";
+        document.getElementById("olhao").src = "Images/Icons/Mostrar_Senha.png";
+      }
+    }
+    function mostrarSenha2() {
+      var x = document.getElementById("confirmar-senha");
+      if (x.type === "password") {
+        x.type = "text";
+        document.getElementById("olhao2").src = "Images/Icons/Ocultar_Senha.png";
+      } else {
+        x.type = "password";
+        document.getElementById("olhao2").src = "Images/Icons/Mostrar_Senha.png";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+        <a class="nao-selecionado underlineHover" href="Login.html">ENTRAR</a>
+        <h2 class="selecionado"> REGISTRAR-SE </h2>
+      <!--FOTO DE PERFIL - INICIO-->
+      <div class="fadeIn animacao-foto-perfil">
+        <script>
+          var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src=URL.createObjectURL(event.target.files[0]);
+          };
+        </script>
+        <input type="file" accept="image/*" onchange="loadFile(event)" id="OcultaInput">
+        <img id="output" width="200" style="width:100;height:100;border-color: black;border-top: 10; border-style: solid;" class="w3-circle" id="icon">
+        <br>
+        <label for="OcultaInput">
+          <img src="Images/Icons/Anexar_foto.png" style="width: 40;cursor: pointer; padding-top: 3%; padding-bottom: 3%;">
+        </label>
+      </div>
+      <!--FOTO DE PERFIL - FIM-->
+      
+      <!--FORMULARIO INSERIR USUARIO, EMAIL, SENHA E CONFIRMAR SENHA - INICIO-->
+      <form name="form">
+        <input type="text" id="login" class="fadeIn animacao-login-user" placeholder="usuario">
+        <input type="email" id="login" class="fadeIn animacao-login-email" attern="/^[a-zA-Z0-9.!#$%&*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="email@exemplo.com" required>
+        <input type="password" id="password" class="fadeIn animacao-login-senha" placeholder="senha">
+        <img src="Images/Icons/Mostrar_Senha.png" style="width: 30;position: absolute;margin-left:83%;margin-top:-50;display:block;cursor: pointer;" id="olhao" onclick="mostrarSenha()">
+
+          <!--CAIXA QUE APARECE QUANDO CLICAMOS EM SENHA - INICIO-->
+          <div id="checarsenha-mensagem-mostrar">
+            <div class="fadeInDownSenha">
+              <h4>A senha deve conter ao menos:</h4>
+              <p id="letter" class="invalid">Uma letra <b>minuscula</b></p>
+              <p id="capital" class="invalid">Uma letra <b>MAIUSCULA</b></p>
+              <p id="number" class="invalid">Um <b>número</b></p>
+              <p id="length" class="invalid">Mínimo de <b>6 caracteres</b></p>
+            </div>
+          </div>
+          <!--CAIXA QUE APARECE QUANDO CLICAMOS EM SENHA - FIM-->
+
+        <!--Script que faz a caixa aparecer- inicio-->
+        <script src="Scripts/ValidarSenha.js"></script>
+        <!--Script que faz a caixa aparecer - fim-->
+
+        <input type="password" id="confirmar-senha" class="fadeIn animacao-login-senha-confirmar" placeholder="confirmar senha" required>
+        <img src="Images/Icons/Mostrar_Senha.png" style="width: 30;position: absolute;margin-left:83%;margin-top:-50;display:block;cursor: pointer;" id="olhao2" onclick="mostrarSenha2()">
+
+        <input type="submit" class="fadeIn animacao-login" value="CONCLUIR" onclick="testarSeFoiEscrito()">
+      </form>
+      <!--FORMULARIO INSERIR USUARIO, EMAIL, SENHA E CONFIRMAR SENHA - FIM-->
+      
+      <!--FUNDO CINZA NO FIM DO FORMULARIO COM O TEXTO - INICIO-->
+      <div id="formFooter">
+        <a class="underlineHover" href="Login.html">Já possui uma conta?</a>
+      </div>
+      <!--FUNDO CINZA NO FIM DO FORMULARIO COM O TEXTO - FIM-->     
+    </div>
+  </div>
+    <footer>
+        <p style="background-color: #C0C0C0; text-align: center;">Victor - All rights reserved<br>© Copyright 2021 - 2022</p>
+    </footer>
+</body>
+</html>

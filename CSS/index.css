@@ -1,0 +1,179 @@
+/*
+Meu Style - CSS será todo comentado, já que não copiei nada de nenhum lado.
+
+1 - Configurações padrão do css do site.´
+
+2 - Parte de "cima"
+    2.1 - Configurações da tabela perfil.
+    2.3 - Configurações da barra de pesquisa.
+
+3 - Animações */
+
+/* 1- Configurações padrão do css do site*/
+body {
+    /*background-image: url('./Images/Backgrounds/Background_Index.jpg');*/
+    background-color: #f7f7f7;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+small {
+    font-family: Calibri;
+}
+footer {
+    padding: 3px;
+    color: black;
+}
+.circulo-foto{
+    border-radius:50%;
+}
+.fundo-tabela{
+    position:relative;
+    box-shadow: 0 10px 30px 0 #0d0d0d;
+    margin: 0% -1% 0% -1%;
+    padding: 0% 1% 0% 1%;
+    background-color: rgba(227, 233, 230, 0.87);
+    border-collapse: inherit;
+}
+.produtos-nome{
+    background-color:#8eaefa;
+    font-family: Calibri;
+    font-size: 150%;
+    color: #0d0e5c;
+    border-radius: 0px 0px 5px 5px;
+}
+.icone-top-venda{
+    width: 30;
+    position:absolute;
+    margin-top:-14%;
+    margin-left: 0.2%;
+    display:block;
+    cursor: pointer;
+}
+.logo-empresa{
+    background-color:#fff;
+    padding: 3%;
+    border-radius: 5px 5px 5px 5px;
+}
+.logo-empresa2{
+    background-color:#fff;
+    padding: 1%;
+    border-radius: 5px 5px 5px 5px;
+}
+.linha-espacamento{
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+}
+.icone-perfil-texto{
+    color:black;
+    font-size:140%;
+    margin:0px;
+    padding:0;
+    text-align:center;
+}
+.icone-perfil-tudo{
+    background-color: rgba(227, 233, 230, 0.87);
+    border-radius: 10px 0px 0px 10px;
+    border-top:1px solid rgb(124, 114, 114);
+    border-left:1px solid rgb(124, 114, 114);
+    border-bottom:1px solid rgb(124, 114, 114);
+}
+.perfil-tabela-localizacao{
+    position: absolute;
+    margin-top: -50;
+    margin-left: 82%;
+    padding: 0;
+    background-color: rgba(227, 233, 230, 0.87);
+    border-radius: 10px 10px 10px 10px;
+    border-collapse: inherit;
+    border-spacing: 0px;
+    width: 18%;
+    height: 12%;
+}
+.anuncio-localizacao{
+    margin-top:-2%; 
+    margin-bottom:2%;
+}
+.nome-perfil-linhas{
+    border-top:1px solid rgb(124, 114, 114);
+    border-right:1px solid rgb(124, 114, 114);
+    border-bottom:1px solid rgb(124, 114, 114);
+    border-radius: 0px 10px 0px 0px;
+}
+.dinheiro-perfil-linhas{
+    border-right:1px solid rgb(124, 114, 114);
+    border-bottom:1px solid rgb(124, 114, 114);
+}
+.carrinho-perfil-linhas{
+    border-right:1px solid rgb(124, 114, 114);
+    border-bottom:1px solid rgb(124, 114, 114);
+    border-radius: 0px 0px 10px 0px;
+}
+
+ /*cima direita baixo esquerda*/
+
+/* 2 - Parte de "cima"
+-----TABELA DE PERFIL-----*/
+
+/*-----BARRA DE PESQUISA-----*/
+#formulario-pesq{
+    background-color: rgba(227, 233, 230, 0.87);
+    width: 250px;
+    height: 30px;
+    border-radius: 9px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin:8;
+}
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 240px;
+    padding: 6px 6px;
+}
+::placeholder {
+    color: black;
+    opacity: 0.7; 
+}
+.lupa-pesq button {
+    all: unset;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+}
+.lupa-pesq {
+    all: unset;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+}
+
+/*-----Animações-----*/
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.zoomProduto{
+    overflow: hidden;
+}
+.zoomProduto img{
+    transition: transform .5s ease;
+    border-radius: 5px 5px 0px 0px;
+}
+.zoomProduto:hover img{
+    transform: scale(1.1);
+}

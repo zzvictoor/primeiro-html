@@ -1,0 +1,305 @@
+/*
+INDEX
+
+1 - Configurações padrão do css do site.
+2 - Animações:
+  2.1 - Linhas embaixo do texto;
+  2.2 - Informações aparecendo;
+  2.3 - Formulário descendo;
+  2.4 - Outras.
+3 - Login e senha.
+4 - "Topo" do formulário - Aba onde diz Entrar/Registrar.
+5 - Enviar os dados.
+
+PARTE DO REGISTRO
+1 - Animações
+2 - Email
+3 - Senha
+4 - Config Padrão CSS*/
+
+/*1 - Configurações padrão do css do site.*/
+body {
+  font-family: "Calibri";
+  height: 90%;
+  background-color: #f7f7f7;
+}
+a {
+  color: black;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+#formContent {
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/*2 - ANIMACÕES
+----- LINHAS EMBAIXO DOS TEXTOS----- */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  content: "";
+  transition: width 0.2s;
+}
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+.underlineHover:hover:after{
+  width: 100%;
+}
+*:focus {
+    outline: none;
+} 
+
+/*-----FORMULARIO DE LOGIN - INFORMACOES "aparecendo"-----*/
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fadeIn {
+  opacity:0;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+}
+.fadeIn.animacao-foto-perfil {
+  animation-delay: 0.4s;
+}
+.fadeIn.animacao-login-user {
+  animation-delay: 0.6s;
+}
+.fadeIn.fadeIn.animacao-login-senha {
+  animation-delay: 0.8s;
+}
+.fadeIn.fadeIn.animacao-login {
+  animation-delay: 1s;
+}
+
+/*-----FORMULARIO "DESCENDO"-----*/
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/*----- OUTRAS -----*/
+#icon {
+  width:60%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/*-----LOGIN E SENHA-----*/
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #0d0d0d;
+}
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=password]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #0d0d0d;
+}
+input[type=password]:placeholder {
+  color: #cccccc;
+}
+
+/*-----"Topo" do formulário - Aba onde diz Entrar/Registrar-----*/
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Calibri;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+a.nao-selecionado {
+    text-align: center;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: 500;
+    display:inline-block;
+    margin: 40px 8px 10px 8px; 
+    color: #cccccc;
+}
+h2.selecionado {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Calibri;
+    display:inline-block;
+    margin: 40px 8px 10px 8px; 
+    color: #0d0d0d;
+    border-bottom: 2px solid #0d0d0d;
+}
+
+/*-----Enviar os dados-----*/
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #2c2f31;
+  border: none;
+  color: white;
+  padding: 4% 11%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 100%;
+  box-shadow: 0 10px 30px 0 #0d0d0d;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5% 20% 5% 20%;
+  transition: all 0.3s ease-in-out;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+background-color: #0d0d0d;
+}
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+transform: scale(0.95);
+}
+
+/*##### REGISTRO #####
+1 -Animações*/
+.fadeIn.animacao-login-email {
+  animation-delay: 0.7s;
+}
+.fadeIn.animacao-login-senha-confirmar {
+  animation-delay: 0.9s;
+}
+@keyframes fadeInDownSenha {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDownSenha {
+  animation-name: fadeInDownSenha;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+/*2 - Email*/
+input[type=email] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=email]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #0d0d0d;
+}
+input[type=email]:placeholder {
+  color: #cccccc;
+}
+
+/*3 - Senha*/
+#checarsenha-mensagem-mostrar {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 0%;
+  margin-top: -3%;
+}
+#checarsenha-mensagem-mostrar p {
+  padding: 10px 35px;
+  font-size: 80%;
+}
+.valid {
+  color: green;
+}
+.valid:before {
+  position:fixed;
+  left: 20%;
+  content: "✔";
+}
+.invalid {
+  color: red;
+}
+.invalid:before {
+  position: fixed;
+  left: 20%;
+  content: "✖";
+}
+
+/*4 - Config Padrão*/
+#OcultaInput{
+  display: none;
+}
