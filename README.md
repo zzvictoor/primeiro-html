@@ -7,3 +7,7 @@ Simplesmente é um repositório com o meu primeiro projeto em html, não sou res
 
 <img src="print.png">
 
+😯 E o site ainda tinha modo escuro!!!
+
+
+<img src="print2.png">
