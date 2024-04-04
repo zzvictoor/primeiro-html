@@ -1,2 +1,3 @@
-# primeiro-html
-Haha, simplesmente achei o primeiro "projeto" de html que fiz.
+# Meu primeiro "projeto" de html
+
+Simplesmente é um repositório com o meu primeiro projeto em html, não sou responsável por infartos de programadores.
